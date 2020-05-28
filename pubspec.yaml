@@ -1,0 +1,16 @@
+name: byte_size
+description: "🔟 Customizable byte size formatting & parsing for interfacing with the user"
+version: 0.0.1
+homepage: https://github.com/JonasWanke/byte_size
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  basics: ^0.4.0
+  meta: ^1.1.8
+  pedantic: ^1.8.0+1
+
+dev_dependencies:
+  test: ^1.14.3
+  test_coverage: ^0.4.1
