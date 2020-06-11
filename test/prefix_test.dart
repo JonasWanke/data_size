@@ -56,7 +56,7 @@ void main() {
           '1.0 Ei');
 
       expect(prefix.format(1024, precision: 3), '1.000 Ki');
-      expect(prefix.format(1025, precision: 3), '1.000 Ki');
+      expect(prefix.format(1025, precision: 3), '1.001 Ki');
       expect(prefix.format(1536, precision: 3), '1.500 Ki');
       expect(prefix.format(2048, precision: 3), '2.000 Ki');
       expect(prefix.format(1024 * 1024, precision: 3), '1.000 Mi');
