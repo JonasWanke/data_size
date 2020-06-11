@@ -14,11 +14,11 @@ class DataUnit {
   final String shortString;
 
   String format(
-    int byteSize, {
+    int size, {
     Prefix prefix = Prefix.decimal,
     int precision = 2,
   }) =>
-      '${prefix.format(byteSize, precision: precision)}$shortString';
+      '${prefix.format(size, precision: precision)}$shortString';
 }
 
 extension FormatDataUnit on int {
