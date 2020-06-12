@@ -15,3 +15,10 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 ### 🏗 Refactoring
 ### 📦 Build & CI
 -->
+
+## [Unreleased](https://github.com/JonasWanke/data_size/compare/v0.1.0...master)
+
+
+## 0.1.0 · 2020-06-12
+
+Initial release 🎉

@@ -3,7 +3,7 @@ name: "data_size"
 description: "🔟 Customizable data size (bit & byte) formatting for interfacing with the user"
 homepage: "https://github.com/JonasWanke/data_size"
 license: "apache-2.0"
-version: "0.0.1"
+version: "0.1.0"
 categorization:
   component:
     values:
