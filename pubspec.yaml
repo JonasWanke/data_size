@@ -1,7 +1,7 @@
-name: byte_size
-description: "🔟 Customizable byte size formatting & parsing for interfacing with the user"
+name: data_size
+description: "🔟 Customizable data size (bit & byte) formatting for interfacing with the user"
 version: 0.0.1
-homepage: https://github.com/JonasWanke/byte_size
+homepage: https://github.com/JonasWanke/data_size
 
 environment:
   sdk: ">=2.7.0 <3.0.0"

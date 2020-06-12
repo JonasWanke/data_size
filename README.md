@@ -1,1 +1,1 @@
-🔟 Customizable byte size formatting & parsing for interfacing with the user
+🔟 Customizable data size (bit & byte) formatting for interfacing with the user

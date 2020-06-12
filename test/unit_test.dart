@@ -1,5 +1,5 @@
 import 'package:test/test.dart';
-import 'package:byte_size/byte_size.dart';
+import 'package:data_size/data_size.dart';
 
 void main() {
   group('bit', () {

@@ -1,14 +1,14 @@
 unicornVersion: "0.1.0"
-name: "byte_size"
-description: "🔟 Customizable byte size formatting & parsing for interfacing with the user"
-homepage: "https://github.com/JonasWanke/byte_size"
+name: "data_size"
+description: "🔟 Customizable data size (bit & byte) formatting for interfacing with the user"
+homepage: "https://github.com/JonasWanke/data_size"
 license: "apache-2.0"
 version: "0.0.1"
 categorization:
   component:
     values:
-    - name: "byte_size"
-      description: "The actual byte_size package"
+    - name: "data_size"
+      description: "The actual data_size package"
       paths:
       - "lib/**"
     - name: "example"

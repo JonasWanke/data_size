@@ -21,13 +21,13 @@ class Prefix {
   final List<String> prefixes;
 
   String format(
-    int byteSize, {
+    int value, {
     int precision = 2,
   }) {
-    assert(byteSize != null);
+    assert(value != null);
     assert(precision != null);
 
-    var size = byteSize.toDouble();
+    var size = value.toDouble();
     var orderOfMagnitude = 0;
     while (size >= divider && prefixes.length > orderOfMagnitude + 1) {
       size /= divider;

@@ -6,7 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 
 
 <!-- Template:
-## [NEW](https://github.com/JonasWanke/byte_size/compare/vOLD...vNEW) · 2020-xx-xx
+## [NEW](https://github.com/JonasWanke/data_size/compare/vOLD...vNEW) · 2020-xx-xx
 ### ⚠ BREAKING CHANGES
 ### 🎉 New Features
 ### ⚡ Changes

@@ -1,4 +1,4 @@
-library byte_size;
+library data_size;
 
 export 'src/prefix.dart';
 export 'src/unit.dart';
