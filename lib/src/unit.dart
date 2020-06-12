@@ -21,16 +21,26 @@ class DataUnit {
       '${prefix.format(size, precision: precision)}$shortString';
 }
 
-extension FormatDataUnit on int {
+extension FormatDataSize on int {
   String formatBitSize({
     Prefix prefix = Prefix.decimal,
     int precision = 2,
   }) =>
-      DataUnit.bit.format(this, prefix: prefix, precision: precision);
+      formatDataSize(unit: DataUnit.bit, prefix: prefix, precision: precision);
 
   String formatByteSize({
     Prefix prefix = Prefix.decimal,
     int precision = 2,
   }) =>
-      DataUnit.byte.format(this, prefix: prefix, precision: precision);
+      formatDataSize(unit: DataUnit.byte, prefix: prefix, precision: precision);
+
+  String formatDataSize({
+    @required DataUnit unit,
+    Prefix prefix = Prefix.decimal,
+    int precision = 2,
+  }) {
+    assert(unit != null);
+
+    return unit.format(this, prefix: prefix, precision: precision);
+  }
 }
