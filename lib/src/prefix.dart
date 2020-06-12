@@ -26,6 +26,7 @@ class Prefix {
   }) {
     assert(value != null);
     assert(precision != null);
+    assert(precision >= 0);
 
     var size = value.toDouble();
     var orderOfMagnitude = 0;
