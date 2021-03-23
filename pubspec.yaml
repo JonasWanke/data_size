@@ -1,6 +1,6 @@
 name: data_size
 description: '🔟 Customizable data size (bit & byte) formatting for interfacing with the user'
-version: 0.1.0
+version: 0.2.0
 homepage: https://github.com/JonasWanke/data_size
 
 environment:
