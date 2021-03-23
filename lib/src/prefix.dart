@@ -3,10 +3,9 @@ import 'package:meta/meta.dart';
 @immutable
 class Prefix {
   const Prefix._({
-    @required this.divider,
-    @required this.prefixes,
-  })  : assert(divider != null),
-        assert(prefixes != null);
+    required this.divider,
+    required this.prefixes,
+  });
 
   static const decimal = Prefix._(
     divider: 1000,
@@ -20,12 +19,7 @@ class Prefix {
   final int divider;
   final List<String> prefixes;
 
-  String format(
-    int value, {
-    int precision = 2,
-  }) {
-    assert(value != null);
-    assert(precision != null);
+  String format(int value, {int precision = 2}) {
     assert(precision >= 0);
 
     var size = value.toDouble();

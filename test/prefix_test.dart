@@ -36,11 +36,14 @@ void main() {
       expect(prefix.format(1024 * 1024, precision: 0), '1 Mi');
       expect(prefix.format(1024 * 1024 * 1024, precision: 0), '1 Gi');
       expect(prefix.format(1024 * 1024 * 1024 * 1024, precision: 0), '1 Ti');
-      expect(prefix.format(1024 * 1024 * 1024 * 1024 * 1024, precision: 0),
-          '1 Pi');
       expect(
-          prefix.format(1024 * 1024 * 1024 * 1024 * 1024 * 1024, precision: 0),
-          '1 Ei');
+        prefix.format(1024 * 1024 * 1024 * 1024 * 1024, precision: 0),
+        '1 Pi',
+      );
+      expect(
+        prefix.format(1024 * 1024 * 1024 * 1024 * 1024 * 1024, precision: 0),
+        '1 Ei',
+      );
 
       expect(prefix.format(1024, precision: 1), '1.0 Ki');
       expect(prefix.format(1025, precision: 1), '1.0 Ki');
@@ -49,11 +52,14 @@ void main() {
       expect(prefix.format(1024 * 1024, precision: 1), '1.0 Mi');
       expect(prefix.format(1024 * 1024 * 1024, precision: 1), '1.0 Gi');
       expect(prefix.format(1024 * 1024 * 1024 * 1024, precision: 1), '1.0 Ti');
-      expect(prefix.format(1024 * 1024 * 1024 * 1024 * 1024, precision: 1),
-          '1.0 Pi');
       expect(
-          prefix.format(1024 * 1024 * 1024 * 1024 * 1024 * 1024, precision: 1),
-          '1.0 Ei');
+        prefix.format(1024 * 1024 * 1024 * 1024 * 1024, precision: 1),
+        '1.0 Pi',
+      );
+      expect(
+        prefix.format(1024 * 1024 * 1024 * 1024 * 1024 * 1024, precision: 1),
+        '1.0 Ei',
+      );
 
       expect(prefix.format(1024, precision: 3), '1.000 Ki');
       expect(prefix.format(1025, precision: 3), '1.001 Ki');
@@ -62,12 +68,17 @@ void main() {
       expect(prefix.format(1024 * 1024, precision: 3), '1.000 Mi');
       expect(prefix.format(1024 * 1024 * 1024, precision: 3), '1.000 Gi');
       expect(
-          prefix.format(1024 * 1024 * 1024 * 1024, precision: 3), '1.000 Ti');
-      expect(prefix.format(1024 * 1024 * 1024 * 1024 * 1024, precision: 3),
-          '1.000 Pi');
+        prefix.format(1024 * 1024 * 1024 * 1024, precision: 3),
+        '1.000 Ti',
+      );
       expect(
-          prefix.format(1024 * 1024 * 1024 * 1024 * 1024 * 1024, precision: 3),
-          '1.000 Ei');
+        prefix.format(1024 * 1024 * 1024 * 1024 * 1024, precision: 3),
+        '1.000 Pi',
+      );
+      expect(
+        prefix.format(1024 * 1024 * 1024 * 1024 * 1024 * 1024, precision: 3),
+        '1.000 Ei',
+      );
       // Larger numbers overflow Dart's int
     });
   });

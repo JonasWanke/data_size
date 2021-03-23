@@ -5,8 +5,8 @@ import 'prefix.dart';
 @immutable
 class DataUnit {
   const DataUnit._({
-    @required this.shortString,
-  }) : assert(shortString != null);
+    required this.shortString,
+  });
 
   static const bit = DataUnit._(shortString: 'b');
   static const byte = DataUnit._(shortString: 'B');
@@ -35,12 +35,9 @@ extension FormatDataSize on int {
       formatDataSize(unit: DataUnit.byte, prefix: prefix, precision: precision);
 
   String formatDataSize({
-    @required DataUnit unit,
+    required DataUnit unit,
     Prefix prefix = Prefix.decimal,
     int precision = 2,
-  }) {
-    assert(unit != null);
-
-    return unit.format(this, prefix: prefix, precision: precision);
-  }
+  }) =>
+      unit.format(this, prefix: prefix, precision: precision);
 }

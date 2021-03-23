@@ -20,16 +20,24 @@ void main() {
       expect(unit.format(2048, prefix: Prefix.binary), '2.00 Kib');
       expect(unit.format(1024 * 1024, prefix: Prefix.binary), '1.00 Mib');
       expect(
-          unit.format(1024 * 1024 * 1024, prefix: Prefix.binary), '1.00 Gib');
-      expect(unit.format(1024 * 1024 * 1024 * 1024, prefix: Prefix.binary),
-          '1.00 Tib');
+        unit.format(1024 * 1024 * 1024, prefix: Prefix.binary),
+        '1.00 Gib',
+      );
       expect(
-          unit.format(1024 * 1024 * 1024 * 1024 * 1024, prefix: Prefix.binary),
-          '1.00 Pib');
+        unit.format(1024 * 1024 * 1024 * 1024, prefix: Prefix.binary),
+        '1.00 Tib',
+      );
       expect(
-          unit.format(1024 * 1024 * 1024 * 1024 * 1024 * 1024,
-              prefix: Prefix.binary),
-          '1.00 Eib');
+        unit.format(1024 * 1024 * 1024 * 1024 * 1024, prefix: Prefix.binary),
+        '1.00 Pib',
+      );
+      expect(
+        unit.format(
+          1024 * 1024 * 1024 * 1024 * 1024 * 1024,
+          prefix: Prefix.binary,
+        ),
+        '1.00 Eib',
+      );
       // Larger numbers overflow Dart's int
     });
 
@@ -48,16 +56,22 @@ void main() {
       expect(unit.format(2000, prefix: Prefix.decimal), '2.00 kb');
       expect(unit.format(1000 * 1000, prefix: Prefix.decimal), '1.00 Mb');
       expect(
-          unit.format(1000 * 1000 * 1000, prefix: Prefix.decimal), '1.00 Gb');
-      expect(unit.format(1000 * 1000 * 1000 * 1000, prefix: Prefix.decimal),
-          '1.00 Tb');
+        unit.format(1000 * 1000 * 1000, prefix: Prefix.decimal),
+        '1.00 Gb',
+      );
       expect(
-          unit.format(1000 * 1000 * 1000 * 1000 * 1000, prefix: Prefix.decimal),
-          '1.00 Pb');
+        unit.format(1000 * 1000 * 1000 * 1000, prefix: Prefix.decimal),
+        '1.00 Tb',
+      );
       expect(
-          unit.format(1000 * 1000 * 1000 * 1000 * 1000 * 1000,
-              prefix: Prefix.decimal),
-          '1.00 Eb');
+        unit.format(1000 * 1000 * 1000 * 1000 * 1000, prefix: Prefix.decimal),
+        '1.00 Pb',
+      );
+      expect(
+        unit.format(1000 * 1000 * 1000 * 1000 * 1000 * 1000,
+            prefix: Prefix.decimal),
+        '1.00 Eb',
+      );
       // Larger numbers overflow Dart's int
     });
   });
@@ -80,16 +94,24 @@ void main() {
       expect(unit.format(2048, prefix: Prefix.binary), '2.00 KiB');
       expect(unit.format(1024 * 1024, prefix: Prefix.binary), '1.00 MiB');
       expect(
-          unit.format(1024 * 1024 * 1024, prefix: Prefix.binary), '1.00 GiB');
-      expect(unit.format(1024 * 1024 * 1024 * 1024, prefix: Prefix.binary),
-          '1.00 TiB');
+        unit.format(1024 * 1024 * 1024, prefix: Prefix.binary),
+        '1.00 GiB',
+      );
       expect(
-          unit.format(1024 * 1024 * 1024 * 1024 * 1024, prefix: Prefix.binary),
-          '1.00 PiB');
+        unit.format(1024 * 1024 * 1024 * 1024, prefix: Prefix.binary),
+        '1.00 TiB',
+      );
       expect(
-          unit.format(1024 * 1024 * 1024 * 1024 * 1024 * 1024,
-              prefix: Prefix.binary),
-          '1.00 EiB');
+        unit.format(1024 * 1024 * 1024 * 1024 * 1024, prefix: Prefix.binary),
+        '1.00 PiB',
+      );
+      expect(
+        unit.format(
+          1024 * 1024 * 1024 * 1024 * 1024 * 1024,
+          prefix: Prefix.binary,
+        ),
+        '1.00 EiB',
+      );
       // Larger numbers overflow Dart's int
     });
 
@@ -108,16 +130,22 @@ void main() {
       expect(unit.format(2000, prefix: Prefix.decimal), '2.00 kB');
       expect(unit.format(1000 * 1000, prefix: Prefix.decimal), '1.00 MB');
       expect(
-          unit.format(1000 * 1000 * 1000, prefix: Prefix.decimal), '1.00 GB');
-      expect(unit.format(1000 * 1000 * 1000 * 1000, prefix: Prefix.decimal),
-          '1.00 TB');
+        unit.format(1000 * 1000 * 1000, prefix: Prefix.decimal),
+        '1.00 GB',
+      );
       expect(
-          unit.format(1000 * 1000 * 1000 * 1000 * 1000, prefix: Prefix.decimal),
-          '1.00 PB');
+        unit.format(1000 * 1000 * 1000 * 1000, prefix: Prefix.decimal),
+        '1.00 TB',
+      );
       expect(
-          unit.format(1000 * 1000 * 1000 * 1000 * 1000 * 1000,
-              prefix: Prefix.decimal),
-          '1.00 EB');
+        unit.format(1000 * 1000 * 1000 * 1000 * 1000, prefix: Prefix.decimal),
+        '1.00 PB',
+      );
+      expect(
+        unit.format(1000 * 1000 * 1000 * 1000 * 1000 * 1000,
+            prefix: Prefix.decimal),
+        '1.00 EB',
+      );
       // Larger numbers overflow Dart's int
     });
   });
