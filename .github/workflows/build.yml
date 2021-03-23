@@ -11,7 +11,7 @@ jobs:
     name: Install dependencies
     runs-on: ubuntu-latest
     container:
-      image: google/dart:2.7
+      image: google/dart:2
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -30,7 +30,7 @@ jobs:
     needs: install
     runs-on: ubuntu-latest
     container:
-      image: google/dart:2.7
+      image: google/dart:2
     steps:
       - name: Checkout source
         uses: actions/download-artifact@v2
@@ -48,7 +48,7 @@ jobs:
     needs: install
     runs-on: ubuntu-latest
     container:
-      image: google/dart:2.7
+      image: google/dart:2
     # TODO(JonasWanke): Re-enable when we re-add test_coverage.
     if: 'false'
     steps:
@@ -71,7 +71,7 @@ jobs:
     needs: install
     runs-on: ubuntu-latest
     container:
-      image: google/dart:2.7
+      image: google/dart:2
     steps:
       - name: Checkout source
         uses: actions/download-artifact@v2
