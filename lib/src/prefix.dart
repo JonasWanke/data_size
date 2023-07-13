@@ -9,7 +9,7 @@ class Prefix {
 
   static const decimal = Prefix._(
     divider: 1000,
-    prefixes: ['', 'k', 'M', 'G', 'T', 'P', 'E', 'Z', 'Y'],
+    prefixes: ['', 'k', 'M', 'G', 'T', 'P', 'E', 'Z', 'Y', 'R', 'Q'],
   );
   static const binary = Prefix._(
     divider: 1024,
