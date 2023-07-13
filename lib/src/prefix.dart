@@ -33,6 +33,12 @@ class Prefix {
     // 1.24 kB and 5.253 MB, but not 8.00 B
     final actualPrecision = orderOfMagnitude == 0 ? 0 : precision;
     final sizeString = size.toStringAsFixed(actualPrecision);
-    return '$sizeString ${prefixes[orderOfMagnitude]}';
+    return '$sizeString$_separator${prefixes[orderOfMagnitude]}';
   }
+
+  /// Narrow No-Break Space, used for combining numbers and unit symbols in
+  /// general.
+  ///
+  /// https://unicode-explorer.com/c/202F
+  static const _separator = '\u202f';
 }
