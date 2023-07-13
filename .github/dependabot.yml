@@ -1,0 +1,13 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    labels: ['T: Build']
+    schedule:
+      interval: weekly
+
+  - package-ecosystem: pub
+    directory: /
+    labels: ['T: Build']
+    schedule:
+      interval: weekly
