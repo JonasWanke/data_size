@@ -1,85 +1,57 @@
 name: Build, Test & Lint
 
 on:
-  push:
   pull_request:
+  push:
+    branches: [main]
   schedule:
-    - cron: '0 4 * * *'
+    - cron: 0 4 * * 1
 
 jobs:
-  install:
-    name: Install dependencies
-    runs-on: ubuntu-latest
-    container:
-      image: google/dart:2
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Install dependencies
-        run: pub get
-
-      - name: Persist current state
-        uses: actions/upload-artifact@v1
-        with:
-          name: source
-          path: .
-
   test:
     name: Run tests
-    needs: install
     runs-on: ubuntu-latest
-    container:
-      image: google/dart:2
+    strategy:
+      matrix:
+        sdk: [stable, beta, dev]
     steps:
-      - name: Checkout source
-        uses: actions/download-artifact@v2
+      - uses: actions/checkout@v3
+      - uses: dart-lang/setup-dart@v1
         with:
-          name: source
+          sdk: ${{ matrix.sdk }}
+      - run: dart pub get
 
-      - name: Install dependencies
-        run: pub get
-
-      - name: Run tests
-        run: pub run test
+      - run: dart test
 
   coverage:
     name: Coverage
-    needs: install
     runs-on: ubuntu-latest
-    container:
-      image: google/dart:2
-    # TODO(JonasWanke): Re-enable when we re-add test_coverage.
-    if: 'false'
+    strategy:
+      matrix:
+        sdk: [stable, beta, dev]
     steps:
-      - name: Checkout source
-        uses: actions/download-artifact@v2
+      - uses: actions/checkout@v3
+      - uses: dart-lang/setup-dart@v1
         with:
-          name: source
+          sdk: ${{ matrix.sdk }}
+      - run: dart pub get
 
-      - name: Install dependencies
-        run: pub get
+      - run: dart pub global activate coverage ^1.0.0
+      - run: dart pub global run coverage:test_with_coverage
 
-      - name: Collect coverage
-        run: pub run test_coverage
-
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v1
+      - uses: codecov/codecov-action@v3
 
   lint:
     name: Lint
-    needs: install
     runs-on: ubuntu-latest
-    container:
-      image: google/dart:2
+    strategy:
+      matrix:
+        sdk: [stable, beta, dev]
     steps:
-      - name: Checkout source
-        uses: actions/download-artifact@v2
+      - uses: actions/checkout@v3
+      - uses: dart-lang/setup-dart@v1
         with:
-          name: source
+          sdk: ${{ matrix.sdk }}
+      - run: dart pub get
 
-      - name: Install dependencies
-        run: pub get
-
-      - name: Run linter
-        run: dartanalyzer .
+      - run: dart analyze
