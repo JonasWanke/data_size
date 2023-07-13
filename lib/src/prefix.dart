@@ -29,7 +29,7 @@ class Prefix {
       orderOfMagnitude++;
     }
 
-    // We don't want to add fraction digits for sizes without a prefix:
+    // We don't want to add fractional digits for sizes without a prefix:
     // 1.24 kB and 5.253 MB, but not 8.00 B
     final actualPrecision = orderOfMagnitude == 0 ? 0 : precision;
     final sizeString = size.toStringAsFixed(actualPrecision);
