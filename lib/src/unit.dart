@@ -1,15 +1,10 @@
-import 'package:meta/meta.dart';
-
 import 'prefix.dart';
 
-@immutable
-class DataUnit {
-  const DataUnit._({
-    required this.shortString,
-  });
+enum DataUnit {
+  bit('b'),
+  byte('B');
 
-  static const bit = DataUnit._(shortString: 'b');
-  static const byte = DataUnit._(shortString: 'B');
+  const DataUnit(this.shortString);
 
   final String shortString;
 

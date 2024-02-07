@@ -1,20 +1,14 @@
-import 'package:meta/meta.dart';
-
-@immutable
-class Prefix {
-  const Prefix._({
-    required this.divider,
-    required this.prefixes,
-  });
-
-  static const decimal = Prefix._(
+enum Prefix {
+  decimal(
     divider: 1000,
     prefixes: ['', 'k', 'M', 'G', 'T', 'P', 'E', 'Z', 'Y', 'R', 'Q'],
-  );
-  static const binary = Prefix._(
+  ),
+  binary(
     divider: 1024,
     prefixes: ['', 'Ki', 'Mi', 'Gi', 'Ti', 'Pi', 'Ei', 'Zi', 'Yi'],
   );
+
+  const Prefix({required this.divider, required this.prefixes});
 
   /// Narrow No-Break Space, used for combining numbers and unit symbols in
   /// general.
