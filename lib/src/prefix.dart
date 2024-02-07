@@ -20,6 +20,7 @@ enum Prefix {
   final List<String> prefixes;
 
   String format(int value, {int precision = 2}) {
+    assert(value >= 0);
     assert(precision >= 0);
 
     var size = value.toDouble();
